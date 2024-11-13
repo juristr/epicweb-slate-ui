@@ -1,6 +1,6 @@
 {
   "name": "@slateui/themes",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Theming system for SlateUI",
   "scripts": {
     "build": "tsup ./index.ts --format esm,cjs --dts",
@@ -18,10 +18,13 @@
   "files": [
     "dist/**"
   ],
-  "keywords": ["themes", "slateui"],
+  "keywords": [
+    "themes",
+    "slateui"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@slateui/core": "*"
+    "@slateui/core": "1.0.0"
   }
-} 
+}

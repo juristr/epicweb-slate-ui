@@ -1,6 +1,6 @@
 {
   "name": "@slateui/buttons",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Button components for SlateUI",
   "scripts": {
     "build": "tsup ./index.ts --format esm,cjs --dts",
@@ -18,10 +18,13 @@
   "files": [
     "dist/**"
   ],
-  "keywords": ["buttons", "slateui"],
+  "keywords": [
+    "buttons",
+    "slateui"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@slateui/core": "*"
+    "@slateui/core": "1.0.0"
   }
-} 
+}

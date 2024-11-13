@@ -1,6 +1,6 @@
 {
   "name": "@slateui/icons",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Icon system for SlateUI",
   "scripts": {
     "build": "tsup ./index.ts --format esm,cjs --dts",
@@ -18,7 +18,10 @@
   "files": [
     "dist/**"
   ],
-  "keywords": ["icons", "slateui"],
+  "keywords": [
+    "icons",
+    "slateui"
+  ],
   "author": "",
   "license": "ISC"
-} 
+}
