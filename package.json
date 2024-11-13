@@ -6,7 +6,8 @@
   "license": "ISC",
   "devDependencies": {
     "tsup": "^8.1.0",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "nx": "20.1.0"
   },
   "workspaces": [
     "packages/*"
