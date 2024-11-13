@@ -5,11 +5,16 @@
   "author": "Juri Strumpflohner",
   "license": "ISC",
   "devDependencies": {
+    "@nx/js": "^20.1.0",
+    "@swc-node/register": "~1.9.1",
+    "@swc/core": "~1.5.7",
+    "@swc/helpers": "~0.5.11",
+    "nx": "20.1.0",
     "tsup": "^8.1.0",
-    "typescript": "^5.5.4",
-    "nx": "20.1.0"
+    "typescript": "^5.5.4"
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "dependencies": {}
 }
