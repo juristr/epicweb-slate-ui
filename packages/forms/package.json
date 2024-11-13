@@ -1,0 +1,29 @@
+{
+  "name": "@slateui/forms",
+  "version": "0.0.1",
+  "description": "Form handling utilities for SlateUI",
+  "scripts": {
+    "build": "tsup ./index.ts --format esm,cjs --dts",
+    "dev": "tsup ./index.ts --format esm,cjs --watch --dts",
+    "typecheck": "tsc --noEmit"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist/**"
+  ],
+  "keywords": ["forms", "slateui"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@slateui/buttons": "*",
+    "@slateui/icons": "*",
+    "@slateui/core": "*"
+  }
+} 

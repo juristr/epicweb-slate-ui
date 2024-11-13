@@ -1,0 +1,14 @@
+{
+  "name": "@slateui/source",
+  "version": "0.0.1",
+  "description": "Demo repo for the Slate UI design system",
+  "author": "Juri Strumpflohner",
+  "license": "ISC",
+  "devDependencies": {
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.4"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
