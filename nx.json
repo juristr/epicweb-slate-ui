@@ -2,9 +2,7 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "targetDefaults": {
     "build": {
-      "dependsOn": [
-        "^build"
-      ],
+      "dependsOn": ["^build"],
       "cache": true
     },
     "typecheck": {
@@ -25,5 +23,10 @@
         }
       }
     }
-  ]
+  ],
+  "release": {
+    "version": {
+      "conventionalCommits": true
+    }
+  }
 }
