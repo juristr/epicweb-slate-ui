@@ -30,7 +30,10 @@
     },
     "conventionalCommits": {
       "types": {
-        "docs": false
+        "docs": true,
+        "style": {
+          "semverBump": "minor"
+        }
       }
     }
   }
