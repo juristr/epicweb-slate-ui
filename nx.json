@@ -27,6 +27,11 @@
   "release": {
     "version": {
       "conventionalCommits": true
+    },
+    "conventionalCommits": {
+      "types": {
+        "docs": false
+      }
     }
   }
 }
