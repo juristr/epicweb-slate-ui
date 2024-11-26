@@ -27,6 +27,10 @@
   "release": {
     "version": {
       "conventionalCommits": true
+    },
+    "releaseTagPattern": "releases/v{version}",
+    "git": {
+      "commitMessage": "chore: we just released v{version} 🎉"
     }
   }
 }
