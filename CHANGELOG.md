@@ -1,3 +1,13 @@
+## 1.3.0 (2024-11-26)
+
+### 🚀 Features
+
+- **core:** improved perf by 10% ([324f135](https://github.com/juristr/epicweb-slate-ui/commit/324f135))
+
+### ❤️  Thank You
+
+- Juri
+
 ## 1.2.0 (2024-11-25)
 
 ### 🚀 Features
