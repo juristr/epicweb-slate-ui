@@ -1,3 +1,13 @@
+## 1.4.0 (2024-11-27)
+
+### 🚀 Features
+
+- improve release and versioning ([246465b](https://github.com/juristr/epicweb-slate-ui/commit/246465b))
+
+### ❤️  Thank You
+
+- Juri @juristr
+
 ## 1.3.0 (2024-11-27)
 
 ### 🚀 Features
