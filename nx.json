@@ -26,7 +26,12 @@
   ],
   "release": {
     "version": {
-      "conventionalCommits": true
+      "generatorOptions": {
+        "specifierSource": "conventional-commits",
+        "packageRoot": "build/{projectRoot}",
+        "currentVersionResolver": "git-tag",
+        "skipLockFileUpdate": true
+      }
     }
   }
 }
