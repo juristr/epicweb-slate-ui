@@ -7,6 +7,11 @@
     },
     "typecheck": {
       "cache": true
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "build/{projectRoot}"
+      }
     }
   },
   "defaultBase": "main",
