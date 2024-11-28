@@ -1,3 +1,13 @@
+## 1.6.0 (2024-11-28)
+
+### 🚀 Features
+
+- **buttons:** add ability to have links ([3421bbd](https://github.com/juristr/epicweb-slate-ui/commit/3421bbd))
+
+### ❤️  Thank You
+
+- Juri @juristr
+
 ## 1.5.0 (2024-11-27)
 
 ### 🚀 Features
