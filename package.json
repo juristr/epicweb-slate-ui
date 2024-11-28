@@ -5,7 +5,7 @@
   "author": "Juri Strumpflohner",
   "license": "ISC",
   "scripts": {
-    "release": "tsx tools/release.ts"
+    "release": "npx nx run-many --target=build && tsx tools/release.ts"
   },
   "devDependencies": {
     "@nx/js": "^20.1.0",
