@@ -1,5 +1,5 @@
 {
-  "name": "@slateui/themes",
+  "name": "@epicpkgdemo/themes",
   "version": "0.0.1",
   "description": "Theming system for SlateUI",
   "scripts": {
@@ -25,6 +25,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@slateui/core": "*"
+    "@epicpkgdemo/core": "*"
   }
 }

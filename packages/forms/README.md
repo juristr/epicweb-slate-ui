@@ -1,3 +1,3 @@
-# @slateui/forms
+# @epicpkgdemo/forms
 
 Form handling utilities for SlateUI.

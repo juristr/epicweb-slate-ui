@@ -1,5 +1,5 @@
 {
-  "name": "@slateui/buttons",
+  "name": "@epicpkgdemo/buttons",
   "version": "0.0.1",
   "description": "Button components for SlateUI",
   "scripts": {
@@ -25,6 +25,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@slateui/core": "*"
+    "@epicpkgdemo/core": "*"
   }
 }

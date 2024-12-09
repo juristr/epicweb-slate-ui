@@ -1,3 +1,3 @@
-# @slateui/themes
+# @epicpkgdemo/themes
 
 Theming system for SlateUI

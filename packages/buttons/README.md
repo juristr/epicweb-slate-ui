@@ -1,3 +1,3 @@
-# @slateui/buttons
+# @epicpkgdemo/buttons
 
 Button components for SlateUI
