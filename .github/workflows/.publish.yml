@@ -32,6 +32,11 @@ jobs:
         with:
           registry-url: https://registry.npmjs.org/
 
+      - name: Set up Git user
+        run: |
+          git config --global user.email "juri.strumpflohner@gmail.com"
+          git config --global user.name "Juri Strumpflohner"
+
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
 
