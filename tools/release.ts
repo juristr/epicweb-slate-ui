@@ -68,6 +68,7 @@ async function copyChangelogFiles() {
 
   const publishResult = await releasePublish({
     registry: "https://registry.npmjs.org",
+    access: "public",
   });
 
   process.exit(
