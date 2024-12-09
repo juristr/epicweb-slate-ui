@@ -1,5 +1,9 @@
 name: publish
 
+# Add manual trigger
+on:
+  workflow_dispatch:
+
 jobs:
   publish:
     # prevents this action from running on forks
