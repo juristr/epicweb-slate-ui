@@ -1,3 +1,3 @@
-# @slateui/icons
+# @epicpkgdemo/icons
 
 Icon system for SlateUI
