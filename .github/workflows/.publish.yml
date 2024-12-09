@@ -1,12 +1,5 @@
 name: publish
 
-on:
-  # Run manually using the GitHub UI
-  workflow_dispatch:
-  # ...or whenever a GitHub release gets created
-  release:
-    types: [published]
-
 jobs:
   publish:
     # prevents this action from running on forks
