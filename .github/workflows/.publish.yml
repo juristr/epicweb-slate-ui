@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       id-token: write # needed for provenance data generation
+      contents: write # allow pushing changes to the repository
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -37,7 +38,7 @@ jobs:
 
       - name: Apply updated version to packages
         run: |
-          npm run publish-pkgs
+          npx nx run release
 
       # - name: Publish packages to npm
       #   run: pnpm nx release publish --registry https://registry.npmjs.org
