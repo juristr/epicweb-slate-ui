@@ -1,0 +1,43 @@
+name: publish
+
+# Add manual trigger
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    # prevents this action from running on forks
+    if: github.repository == 'juristr/epicweb-slate-ui'
+    name: Publish to npm
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write # needed for provenance data generation
+      contents: write # allow pushing changes to the repository
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # include tags
+          cache: "npm"
+
+      - name: Install Node.js per package.json
+        uses: actions/setup-node@v4
+        with:
+          registry-url: https://registry.npmjs.org/
+
+      - name: Set up Git user
+        run: |
+          git config --global user.email "juri.strumpflohner@gmail.com"
+          git config --global user.name "Juri Strumpflohner"
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Apply updated version to packages
+        run: npx npm run publish-pkgs
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # - name: Publish packages to npm
+      #   run: pnpm nx release publish --registry https://registry.npmjs.org
