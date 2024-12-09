@@ -32,18 +32,54 @@ async function copyPackagesToBuild() {
   }
 }
 
+async function copyChangelogFiles() {
+  const buildDir = path.join(process.cwd(), "build");
+  const packagesDir = path.join(process.cwd(), "packages");
+  const packageDirs = await fs.readdir(packagesDir);
+
+  for (const pkg of packageDirs) {
+    const srcChangelogPath = path.join(packagesDir, pkg, "CHANGELOG.md");
+    const destChangelogPath = path.join(
+      buildDir,
+      "packages",
+      pkg,
+      "CHANGELOG.md"
+    );
+
+    if (await fs.pathExists(srcChangelogPath)) {
+      await fs.copy(srcChangelogPath, destChangelogPath);
+    }
+  }
+}
+
 (async () => {
   await copyPackagesToBuild();
 
-  const { workspaceVersion, projectsVersionData } = await releaseVersion({});
+  const { workspaceVersion, projectsVersionData } = await releaseVersion({
+    stageChanges: true,
+  });
 
   await releaseChangelog({
     versionData: projectsVersionData,
     version: workspaceVersion,
   });
 
-  const publishResult = await releasePublish({});
+  await copyChangelogFiles();
+
+  const publishResult = await releasePublish({
+    dryRun: true,
+  });
+
   process.exit(
     Object.values(publishResult).every((result) => result.code === 0) ? 0 : 1
   );
+
+  // process.exit(
+  //   releaseChangelogResult.projectChangelogs &&
+  //     Object.values(releaseChangelogResult.projectChangelogs).every(
+  //       (result) => result.contents !== undefined
+  //     )
+  //     ? 0
+  //     : 1
+  // );
 })();
