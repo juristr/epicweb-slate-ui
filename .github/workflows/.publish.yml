@@ -37,6 +37,7 @@ jobs:
         run: npx npm run publish-pkgs
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # - name: Publish packages to npm
       #   run: pnpm nx release publish --registry https://registry.npmjs.org
