@@ -38,7 +38,7 @@ jobs:
 
       - name: Apply updated version to packages
         run: |
-          npx nx run publish-pkgs
+          npx npm run publish-pkgs
 
       # - name: Publish packages to npm
       #   run: pnpm nx release publish --registry https://registry.npmjs.org
