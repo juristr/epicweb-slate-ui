@@ -34,10 +34,9 @@ jobs:
         run: npm ci --legacy-peer-deps
 
       - name: Apply updated version to packages
-        run: |
-          npx npm run publish-pkgs
+        run: npx npm run publish-pkgs
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       # - name: Publish packages to npm
       #   run: pnpm nx release publish --registry https://registry.npmjs.org
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
