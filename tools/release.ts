@@ -64,10 +64,11 @@ async function copyChangelogFiles() {
 
   await copyChangelogFiles();
 
-  process.exit(0);
-
-  // const publishResult = await releasePublish({});
-  // process.exit(
-  //   Object.values(publishResult).every((result) => result.code === 0) ? 0 : 1
-  // );
+  const publishResult = await releasePublish({
+    registry: "https://registry.npmjs.org/",
+    access: "public",
+  });
+  process.exit(
+    Object.values(publishResult).every((result) => result.code === 0) ? 0 : 1
+  );
 })();
