@@ -32,6 +32,26 @@ async function copyPackagesToBuild() {
   }
 }
 
+async function copyChangelogFiles() {
+  const buildDir = path.join(process.cwd(), "build");
+  const packagesDir = path.join(process.cwd(), "packages");
+  const packageDirs = await fs.readdir(packagesDir);
+
+  for (const pkg of packageDirs) {
+    const srcChangelogPath = path.join(packagesDir, pkg, "CHANGELOG.md");
+    const destChangelogPath = path.join(
+      buildDir,
+      "packages",
+      pkg,
+      "CHANGELOG.md"
+    );
+
+    if (await fs.pathExists(srcChangelogPath)) {
+      await fs.copy(srcChangelogPath, destChangelogPath);
+    }
+  }
+}
+
 (async () => {
   await copyPackagesToBuild();
 
@@ -42,8 +62,12 @@ async function copyPackagesToBuild() {
     version: workspaceVersion,
   });
 
-  const publishResult = await releasePublish({});
-  process.exit(
-    Object.values(publishResult).every((result) => result.code === 0) ? 0 : 1
-  );
+  await copyChangelogFiles();
+
+  process.exit(0);
+
+  // const publishResult = await releasePublish({});
+  // process.exit(
+  //   Object.values(publishResult).every((result) => result.code === 0) ? 0 : 1
+  // );
 })();

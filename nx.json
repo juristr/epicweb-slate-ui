@@ -41,7 +41,8 @@
     "changelog": {
       "workspaceChangelog": {
         "createRelease": "github"
-      }
+      },
+      "projectChangelogs": true
     }
   }
 }
