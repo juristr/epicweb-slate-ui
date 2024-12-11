@@ -26,5 +26,10 @@
   "license": "ISC",
   "dependencies": {
     "@epicpkgdemo/core": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juristr/epicweb-slate-ui",
+    "directory": "packages/themes"
   }
 }

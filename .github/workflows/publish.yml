@@ -13,6 +13,8 @@ jobs:
     permissions:
       contents: write #allows to push commits to the repo
       id-token: write
+    env:
+      NPM_CONFIG_PROVENANCE: true
     steps:
       - name: Checkout
         uses: actions/checkout@v4

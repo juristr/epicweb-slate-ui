@@ -2,6 +2,11 @@
   "name": "@epicpkgdemo/forms",
   "version": "0.0.1",
   "description": "Form handling utilities for SlateUI",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juristr/epicweb-slate-ui",
+    "directory": "packages/forms"
+  },
   "scripts": {
     "build": "tsup ./index.ts --format esm,cjs --dts",
     "dev": "tsup ./index.ts --format esm,cjs --watch --dts",
