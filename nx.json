@@ -27,6 +27,26 @@
   "release": {
     "version": {
       "conventionalCommits": true
+    },
+    "conventionalCommits": {
+      "types": {
+        "feat": {
+          "changelog": {
+            "title": "🚀 New Features!!!"
+          }
+        },
+        "docs": true
+      }
+    },
+    "changelog": {
+      "workspaceChangelog": {
+        "renderOptions": {
+          "authors": false,
+          "mapAuthorsToGitHubUsernames": true,
+          "versionTitleDate": false,
+          "commitReferences": true
+        }
+      }
     }
   }
 }
